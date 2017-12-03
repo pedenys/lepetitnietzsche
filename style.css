@@ -104,17 +104,19 @@ a:active{
 	text-align: left;
 }
 .paragraphe p, .paragraphe blockquote{
-	font-size: 1.3em;
+	font-size: 3vh;
+	text-align: left;
+	padding: 0.3em 1em;
 }
 #relativiste p:last-child{
 	margin-bottom: 30em;
 }
 h1{
-	font-size: 4em;
+	font-size: 8vh;
 	margin-bottom:3vh;
 }
 h2{
-	font-size: 2.5em;
+	font-size: 4vh;
 }
 blockquote{
 	font-family: "Inconsolata", arial;
@@ -122,8 +124,6 @@ blockquote{
 	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.5);
 	box-shadow: 0 0 6px rgba(0,0,0,0.5);
 	border-left: 0.5em solid #DDD;
-	text-align: justify;
-	padding: 0.3em 1em;
 }
 strong{
 	color: #3b77db;

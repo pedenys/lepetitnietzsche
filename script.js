@@ -5,6 +5,5 @@ $(document).ready(function(){
 	$(paragraphe).hide();
     $(h2).click(function(){
         $(this).next().slideToggle("slow");
-        
     });
 });
