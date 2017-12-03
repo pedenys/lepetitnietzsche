@@ -1,0 +1,105 @@
+.paragraphe{
+	display: hidden;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	/*align-content: center;*/
+}
+nav{
+	background-color:gold;
+	flex: 1 1 100%;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+}
+.main{
+	background-color:white;
+	flex: 1 1 100%;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	text-align: center;
+
+	
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+}
+footer{
+	background-color:royalblue;
+	flex: 1 1 100%;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+/*height*/
+body{
+	min-height: 100vh;
+}
+nav{
+	min-height:10vh;
+}
+.main{
+	min-height: 80vh;
+	/* pour rendre le contenu scrollable plutôt 
+	que de l'étendre
+
+	max-height: 80vh;
+	overflow-y: scroll;*/
+}
+footer{
+	min-height: 10vh;
+
+	
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+}
+
+/*reset des h* et p*/
+div, p, h1, h2, .main,.content,nav,footer, body{
+	margin: 0 0;
+}
+body{
+	font-family: "PT Sans", serif;
+	font-size: 2vh;
+	color:#000;
+}
+nav{
+	text-transform: uppercase;
+	font-size: 2em;
+	font-family: "Arvo", sans-serif;
+}
+a:hover{
+	color:#000;
+	text-decoration: none;
+}
+a{
+	text-decoration: underline dotted #4285f4;
+	color:#4285f4;
+}
+.paragraphe{
+	margin: 1vw 10vw;
+	text-align: left;
+}
+h1{
+	font-size: 5vh;
+	margin-bottom:3vh;
+}
+h2{
+	font-size: 3.5vh;
+}
