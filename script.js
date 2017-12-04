@@ -1,9 +1,10 @@
 var paragraphe = $(".paragraphe");
-var h2 = $(".titre");
+var quote = $("blockquote");
+
 
 $(document).ready(function(){
 	$(paragraphe).hide();
-    $(h2).click(function(){
+    $(quote).click(function(){
         $(this).next().slideToggle("slow");
     });
 });
