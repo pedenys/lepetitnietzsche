@@ -9,7 +9,7 @@
 	/*align-content: center;*/
 }
 nav{
-	background-color:#f4b400;
+	background-color:white;
 	flex: 1 1 100%;
 	display: flex;
 	align-items: stretch;
@@ -22,7 +22,6 @@ nav{
 	align-items: center;
 }
 .main{
-	background-color:white;
 	flex: 1 1 100%;
 	display: flex;
 	align-items: stretch;
@@ -49,7 +48,7 @@ body{
 	min-height: 100vh;
 }
 nav{
-	min-height:10vh;
+	min-height:15vh;
 }
 .main{
 	min-height: 80vh;
@@ -60,7 +59,7 @@ nav{
 	overflow-y: scroll;*/
 }
 footer{
-	min-height: 10vh;
+	min-height: 5vh;
 
 	
 	-ms-flex-align: center;
@@ -85,7 +84,7 @@ nav{
 	font-family: "Arvo", sans-serif;
 }
 a:link{
-	text-decoration: underline dotted #4285f4;
+	text-decoration: none;	
 	color:#4285f4;
 }
 a:visited{
@@ -93,7 +92,7 @@ a:visited{
 }
 a:hover{
 	color:#333333;
-	text-decoration: none;
+	text-decoration: underline black;
 }
 a:active{
 	color:#333333;
@@ -111,8 +110,8 @@ a:active{
 .paragraphe blockquote{
 	color:black;
 }
-#relativiste p:last-child{
-	margin-bottom: 30em;
+.block{
+	padding-bottom: 1vh;
 }
 h1{
 	font-size: 8vh;
@@ -130,4 +129,8 @@ blockquote{
 }
 strong{
 	color: #3b77db;
+}
+#logo{
+	height:auto;
+	width:30vw;
 }
