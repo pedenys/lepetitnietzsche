@@ -112,8 +112,8 @@ body{
 }
 nav{
 	text-transform: uppercase;
-	font-size: 2em;
-	font-family: "PT Sans", sans-serif;
+	font-size: 8vw;
+	font-family: "Montserrat", sans-serif;
 }
 a:link{
 	text-decoration: none;	
@@ -132,17 +132,13 @@ a:active{
 	text-decoration: none;
 };
 .paragraphe{
-	margin: 1vw 10vw;
+	margin: 1vw 5vw;
 	text-align: left;
 }
 .paragraphe p{
-	font-size: 3vh;
+	font-size: 2.6vh;
 	text-align: left;
-	padding: 0.3em 1em;
-}
-blockquote{
-	color:black;
-	font-size:2.5vh;
+	padding: 0.3em 0.1em;
 }
 .block{
 	padding-bottom: 1vh;
@@ -155,10 +151,13 @@ h2{
 	font-size: 4vh;
 }
 blockquote{
-	font-family: "Inconsolata", arial;
+	font-family: "Inconsolata", monospace;
 	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5);
 	box-shadow: 0 0 6px rgba(0,0,0,0.5);
 	border-left: 0.5em solid #DDD;
+	color:black;
+	font-size:4.5vw;
+	padding:0.5em 0.5em;
 }
 strong{
 	color: #3b77db;
