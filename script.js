@@ -9,7 +9,7 @@ $(document).ready(function(){
         if ($(this).next().is(":visible")){
         	$('html, body').animate({
         scrollTop: $(this).position().top
-    }, 500);
+    }, 400);
         } 
     });
 
