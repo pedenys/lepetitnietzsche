@@ -169,6 +169,7 @@ blockquote{
 	color:black;
 	font-size: calc(0.75em + 1vmin);
 	padding:0.5em 0.5em;
+	cursor: pointer;
 }
 strong{
 	color: #3b77db;
