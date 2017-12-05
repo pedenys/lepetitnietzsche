@@ -113,7 +113,8 @@ body{
 nav{
 	text-transform: uppercase;
 	font-size: 8vw;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Oswald", sans-serif;
+	padding:0.2em;
 }
 a:link{
 	text-decoration: none;	
@@ -135,7 +136,7 @@ a:active{
 	margin: 1vw 5vw;
 	text-align: left;
 }
-.paragraphe p{
+.paragraphe p, p{
 	font-size: calc(0.75em + 1vmin);
 	text-align: left;
 	padding: 0.3em 0.1em;
@@ -144,9 +145,14 @@ a:active{
 .block{
 	padding-bottom: 1vh;
 }
-h1{
+.h1{
 	font-size: 8vh;
-	margin-bottom:3vh;
+	border: 4px solid black;
+	padding: 0.1em 0.4em;
+}
+h1{
+	margin-bottom:4vh;
+	margin-top:1vh;
 }
 h2{
 	font-size: 4vh;
@@ -171,4 +177,11 @@ strong{
 .content{
 	margin:0 auto;
 	max-width:80vw;
+}
+nav a{
+	text-decoration: none;
+	color:#333 !important;
+}
+nav a:hover{
+	text-decoration: underline dotted;
 }
