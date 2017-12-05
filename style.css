@@ -60,7 +60,6 @@ nav{
 	align-items: center;
 }
 footer{
-	background-color:#4285f4;
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 1 100%;
 	        flex: 1 1 100%;
@@ -136,11 +135,14 @@ a:active{
 	margin: 1vw 5vw;
 	text-align: left;
 }
-.paragraphe p, p{
+.paragraphe p, p, li{
 	font-size: calc(0.75em + 1vmin);
 	text-align: left;
 	padding: 0.3em 0.1em;
 	line-height: 1.5em;
+}
+blockquote > p{
+	line-height:1.2em;
 }
 .block{
 	padding-bottom: 1vh;
@@ -184,4 +186,10 @@ nav a{
 }
 nav a:hover{
 	text-decoration: underline dotted;
+}
+footer{
+	font-size: calc(0.75em + 1vmin);
+}
+.ailleurs a{
+	color:#333;
 }
