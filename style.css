@@ -145,7 +145,7 @@ blockquote > p{
 	line-height:1.2em;
 }
 .block{
-	padding-bottom: 1vh;
+	margin-bottom: 7vh;
 }
 .h1{
 	font-size: 8vh;
@@ -158,6 +158,8 @@ h1{
 }
 h2{
 	font-size: 4vh;
+	text-align: left;
+	margin-left:1vw;
 }
 blockquote{
 	font-family: "Inconsolata", monospace;
@@ -186,6 +188,7 @@ nav a{
 }
 nav a:hover{
 	text-decoration: underline dotted;
+	color:black!important;
 }
 footer{
 	font-size: calc(0.75em + 1vmin);
