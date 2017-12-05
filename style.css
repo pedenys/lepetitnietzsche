@@ -184,16 +184,16 @@ strong{
 	max-width:80vw;
 }
 nav a{
-	text-decoration: none;
-	color:#333 !important;
+	text-decoration: underline dotted !important;
+	color:black!important;
 }
 nav a:hover{
-	text-decoration: underline dotted;
-	color:black!important;
+	text-decoration: none !important;
+	color:#333 !important;
 }
 footer{
 	font-size: calc(0.75em + 1vmin);
 }
 .ailleurs a{
-	color:#333;
+	color:black !important;
 }
