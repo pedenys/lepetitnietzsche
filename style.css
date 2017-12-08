@@ -76,7 +76,7 @@ footer{
 }
 
 /*height*/
-body{
+/*body{
 	min-height: 100vh;
 }
 nav{
@@ -84,21 +84,10 @@ nav{
 }
 .main{
 	min-height: 80vh;
-	/* pour rendre le contenu scrollable plutôt 
-	que de l'étendre
-
-	max-height: 80vh;
-	overflow-y: scroll;*/
 }
 footer{
 	min-height: 10vh;
-
-	
-	-ms-flex-align: center;
-	-webkit-box-align: center;
-
-	align-items: center;
-}
+}*/
 
 /*reset des h* et p*/
 div, p, h1, h2, .main,.content,nav,footer, body{
@@ -115,6 +104,18 @@ nav{
 	font-size: 8vw;
 	font-family: "Oswald", sans-serif;
 	padding:0.2em;
+}
+nav > p{
+	font-size: .3em;
+	padding-top: 0em;
+}
+nav a{
+	text-decoration: underline dotted !important;
+	color:black!important;
+}
+nav a:hover{
+	text-decoration: none !important;
+	color:#020844 !important;
 }
 a:link{
 	text-decoration: none;	
@@ -136,15 +137,11 @@ a:active{
 	margin: 1vw 5vw;
 	text-align: left;
 }
-.paragraphe p, p, li{
+p, li{
 	font-size: calc(0.75em + 1vmin);
 	text-align: left;
 	padding: 0.3em 0.1em;
 	line-height: 1.5em;
-}
-nav > p{
-	font-size: 0.2em/*calc(0.1em + 1vmin)*/;
-	padding-bottom: 1em;
 }
 blockquote > p{
 	line-height:1.2em;
@@ -153,13 +150,13 @@ blockquote > p{
 	margin-bottom: 7vh;
 }
 .h1{
-	font-size: 8vh;
+	font-size: calc(1em + 2vmin);
 	border: 4px solid black;
 	padding: 0.1em 0.4em;
 }
 h1{
-	margin-bottom:4vh;
-	margin-top:1vh;
+	margin-bottom:0.8em;
+	margin-top:0.5em;
 }
 h2{
 	font-size: 4vh;
@@ -188,17 +185,14 @@ strong{
 	margin:0 auto;
 	max-width:80vw;
 }
-nav a{
-	text-decoration: underline dotted !important;
-	color:black!important;
-}
-nav a:hover{
-	text-decoration: none !important;
-	color:#333 !important;
-}
 footer{
 	font-size: calc(0.75em + 1vmin);
 }
 .ailleurs a{
 	color:black !important;
+}
+.content > p{
+	text-align: center;
+	color:#373842;
+	font-size: 1em;
 }
