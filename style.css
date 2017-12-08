@@ -37,6 +37,7 @@ nav{
 	-webkit-box-align: center;
 
 	align-items: center;
+	flex-direction: column;
 }
 .main{
 	-webkit-box-flex: 1;
@@ -140,6 +141,10 @@ a:active{
 	text-align: left;
 	padding: 0.3em 0.1em;
 	line-height: 1.5em;
+}
+nav > p{
+	font-size: 0.2em/*calc(0.1em + 1vmin)*/;
+	padding-bottom: 1em;
 }
 blockquote > p{
 	line-height:1.2em;
