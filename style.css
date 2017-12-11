@@ -153,7 +153,14 @@ blockquote > p{
 	font-size: calc(1em + 2vmin);
 	border: 4px solid black;
 	padding: 0.1em 0.4em;
+	text-decoration: none;
+	color:black;
 }
+.h1:hover{
+	background-color: black;
+	color:white;
+}
+
 h1{
 	margin-bottom:0.8em;
 	margin-top:0.5em;
@@ -194,5 +201,12 @@ footer{
 .content > p{
 	text-align: center;
 	color:#373842;
-	font-size: 1em;
+	font-size: 1.5em;
+	text-shadow: 1px 0px red;
+	text-decoration: underline wavy ;
+	text-decoration-color: red;
+}
+h2{
+	font-family: "Oswald";
+	text-decoration: underline double royalblue;
 }
