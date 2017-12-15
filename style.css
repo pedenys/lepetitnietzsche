@@ -113,8 +113,8 @@ nav > p{
 	padding-top: 0em;
 }
 nav a{
-	-webkit-text-decoration: underline dotted !important;
-	        text-decoration: underline dotted !important;
+	-webkit-text-decoration: underline double !important;
+	        text-decoration: underline double !important;
 	color:black!important;
 }
 nav a:hover{
