@@ -1,5 +1,13 @@
 .paragraphe{
+	margin: 4vmin 1vmin;
+	line-height:1.6em;
+	font-size: calc(0.9em + 1vmin);
+	text-align: left;
 	display: hidden;
+}
+em{
+	font-weight: bold;
+	font-style: normal;
 }
 .wrapper{
 	display: -webkit-box;
@@ -17,7 +25,7 @@
 	        justify-content: center;
 	/*align-content: center;*/
 }
-nav{
+.nav{
 	background-color:white;
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 1 100%;
@@ -96,101 +104,117 @@ footer{
 div, p, h1, h2, .main,.content,nav,footer, body{
 	margin: 0 0;
 }
-/**/
+.main{
+	margin-top:1em !important;
+}
+
 body{
-	font-family: "PT Sans", serif;
+	font-family: "Eczar", serif;
 	font-size: 1em;
-	color:#333333;
+	color: black;
 }
-nav{
-	text-transform: uppercase;
-	font-size: 8vw;
-	font-family: "Oswald", sans-serif;
-	padding:0.2em;
-}
-nav > p{
-	font-size: .3em;
-	padding-top: 0em;
-}
+
 nav a{
-	-webkit-text-decoration: underline double !important;
-	        text-decoration: underline double !important;
+	font-family: "Eczar", sans-serif;
+	padding:0.2em;
 	color:black!important;
+	color: #00007F!important;
+}
+nav a h1{
+	font-size: 10vmin;
+	letter-spacing: -0.41vmin;
+	font-weight: normal;
+	margin: 2vmin 0;
+}
+nav a h2{
+	font-size: 3.2vmin !important;
+	font-weight: normal;
+	-webkit-text-decoration: none !important;
+	        text-decoration: none!important;
+	font-style: italic;
 }
 nav a:hover{
-	text-decoration: none !important;
-	color:#020844 !important;
+	text-decoration: wavy !important;
+	color:#00007F !important;
 }
 a:link{
 	text-decoration: none;	
-	color:#4285f4;
+	color:blue;
 }
 a:visited{
-	color: #0d5bdd;
+	color:#4285f4;
 }
 a:hover{
-	color:#333333;
-	-webkit-text-decoration: underline black;
-	        text-decoration: underline black;
+	color:#4285f4;
 }
 a:active{
 	color:#333333;
 	text-decoration: none;
 };
-.paragraphe{
-	margin: 1vw 5vw;
-	text-align: left;
-}
 p, li{
 	font-size: calc(0.75em + 1vmin);
-	text-align: left;
-	padding: 0.3em 0.1em;
-	line-height: 1.5em;
-}
-blockquote > p{
-	line-height:1.2em;
+	text-align: left !important;
+	padding: 2vmin 1vmin;
+	/*line-height: 1.65em;*/
 }
 .block{
-	margin-bottom: 7vh;
+	margin-bottom: 5vmin;
+	text-align: left !important;
 }
-.h1{
-	font-size: calc(1em + 2vmin);
-	border: 4px solid black;
-	padding: 0.1em 0.4em;
-	text-decoration: none;
-	color:black;
+.about-block{
+	margin-bottom:5vmin;
+	font-size: calc(0.9em + 1vmin);
+	text-align: left !important;
+	line-height: 1.3em;
 }
-.h1:hover{
-	background-color: black;
-	color:white;
-}
-
-h1{
-	margin-bottom:0.8em;
-	margin-top:0.5em;
+.about-block h3{
+	color:#00007F;
+	font-size: calc(0.9em + 2vmin);
+	margin: 0 !important;
+	line-height: 1.3em;
 }
 h2{
+	font-size: calc(0.8em + 2vmin);
+	border: 4px solid #00007F;
+	padding: 0.1em 0em;
+	margin: 0 0 1em 0;
+	text-decoration: none;
+	color:#00007F;
+}
+h1{
+	margin-top:0.5em;
+}
+.h2{
 	font-size: 4vh;
 	text-align: left;
-	margin-left:1vw;
 }
 blockquote{
-	font-family: "Inconsolata", monospace;
+	font-family: "Space Mono", monospace;
 	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5);
 	box-shadow: 0 0 6px rgba(0,0,0,0.5);
 	border-left: 0.5em solid #DDD;
 	color:black;
-	font-size: calc(0.75em + 1vmin);
-	padding:0.5em 0.5em;
+	font-size: calc(0.7em + 1vmin);
+	padding:1vmin 1vmin;
+	margin:1vmin 1vmin;
 	cursor: pointer;
+	text-align: left;
+	color: black;
 }
-strong{
-	color: #3b77db;
+blockquote > h3{
+	text-align: left;
+	color:#00007F;
+	margin-left:0.5em;
+	font-size: calc(0.6em + 1.8vmin);
+	text-shadow: 1px 0px black;
+	margin: 0 0;
+	margin-bottom: 1vmin;
+	font-weight: normal;
 }
-#logo{
-	height:auto;
-	width:40vh;
-	margin-top:0.5em;
+blockquote > p{
+	line-height:1.4em;
+	font-size: calc(0.6em + 1vmin);
+	color: #444 !important;
 }
 .content{
 	margin:0 auto;
@@ -200,20 +224,26 @@ footer{
 	font-size: calc(0.75em + 1vmin);
 }
 .ailleurs a{
-	color:black !important;
+	color:#00007F !important;
 }
-.content > p{
+.modeemploi{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding-bottom:1vmin;
+	margin: 0em 1em;
+}
+#modeemploi{
+	color:#00007F;
+	font-size: calc(0.6em + 1vmin);
+	background-color: rgba(2,8,68,0.1);
+	border: 3px solid #00007F;
+	padding: 0.3em 1em;
 	text-align: center;
-	color:#373842;
-	font-size: 1.5em;
-	text-shadow: 1px 0px red;
-	-webkit-text-decoration: underline wavy ;
-	        text-decoration: underline wavy ;
-	-webkit-text-decoration-color: red;
-	        text-decoration-color: red;
 }
-h2{
-	font-family: "Oswald";
-	-webkit-text-decoration: underline double royalblue;
-	        text-decoration: underline double royalblue;
+.block h2{
+	margin-left:0;
+}
+.paragraphe p {
+	margin-bottom:1em
 }
