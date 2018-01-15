@@ -1,3 +1,5 @@
 #ignorer :
 gulp
 style.css
+script.js
+moustache-old-favicon.png
