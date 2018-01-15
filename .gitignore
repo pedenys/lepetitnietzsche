@@ -1,2 +1,3 @@
 #ignorer :
-gulp !styles.min.css
+gulp
+style.css
