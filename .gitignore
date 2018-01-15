@@ -1,2 +1,2 @@
 #ignorer :
-jambon.txt
+gulp !styles.min.css
