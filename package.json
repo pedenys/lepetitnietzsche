@@ -1,0 +1,28 @@
+{
+  "name": "lepetitnietzsche",
+  "version": "1.0.0",
+  "description": "le petit nietzsche website powered by Nextjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next"
+  },
+  "keywords": [
+    "nextjs"
+  ],
+  "author": "apolineaire",
+  "license": "ISC",
+  "dependencies": {
+    "next": "9.0.7",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
+    "styled-components": "4.4.0"
+  },
+  "devDependencies": {
+    "@types/next": "8.0.6",
+    "@types/react": "16.9.5",
+    "@types/styled-components": "4.1.19",
+    "@zeit/next-typescript": "1.1.1",
+    "typescript": "^3.6.3"
+  }
+}
