@@ -18,6 +18,9 @@ const LayoutContainer = styled.div`
 `
 const LayoutInner = styled.div`
     margin: 0 4rem;
+    @media screen and (max-width: ${props => props.theme.mobileBreakpoint}){
+        margin: 0 1.6rem;
+    }
 `
 
 

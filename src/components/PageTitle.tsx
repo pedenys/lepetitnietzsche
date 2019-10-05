@@ -28,10 +28,10 @@ const PageTitleInner = styled.div<PageTitleProps>`
     @media screen and (max-width: ${props => props.theme.mobileBreakpoint}){
         min-width:100%;
         width:100%;
-        /* margin: 0; */
         p {
             font-size:2rem;
             line-height:1;
+            padding:1rem 0;
         }
     }
 `
