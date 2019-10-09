@@ -32,6 +32,48 @@ const fr: any = {
             q: "Mentions légales",
             a: "<p>Le site lepetitnietzsche.fr est hébergé par 1&1 Internet SARL 7, place de la Gare BP 70109 57201 Sarreguemines Cedex – Code APE 6201Z. </p><p>Ce site et ses contenus sont fournis « en l’état », sans aucune garantie explicite ou tacite. Il peut présenter des inexactitudes, des erreurs, des omissions ou des problèmes techniques. Le site lepetitnietzsche.fr ne saurait être tenu responsable des problèmes rencontrés lors de l’utilisation du site.</p>"
         },
+    },
+    quotes:{
+        1:{
+            t:"Nietzsche était fou",
+            q:"En janvier 1889, Nietzsche a embrassé un cheval dans une rue de Turin parce qu’il était devenu fou. Sa philosophie délirante a causé sa maladie psychologique.",
+            a:{
+                1:"La légende du cheval n'a jamais été confirmée. Le Dr. Wille, médecin de l’hopital de Bâle qui recueillit Nietzsche après son effondrement, parle dans son rapport d’une « paralysie progressive ». L’origine de la maladie de Nietzsche est donc organique, non psychologique.",
+                2: "Ses développements philosophiques ne peuvent ainsi pas être la cause de sa maladie. En effet, si le sentiment d’être détenteur d’une mission capitale, la remise en cause des dichotomies les plus habituelles de la raison, la critique de la culture occidentale sont des traits de folie, alors il faudrait avancer que Nietzsche est fou depuis ses premiers écrits philosophiques. Or jusqu’à la veille de son effondrement, Nietzsche continue de rester maître de sa prose, usant entre autres de méthodes de raisonnement classiques et largement partagées par la tradition philosophique. Dès janvier 1889, Nietzsche cesse d’écrire."
+            }
+        },
+        2:{
+            t:"Nietzsche n'est pas vraiment un philosophe",
+            q:"Nietzsche était plus un poète qu'un philosophe authentique. Il avait des intuitions géniales mais était incapable de les justifier rationnellement.",
+            a:{
+                1:"La tradition philosophique a défini les idées comme appartenant à un domaine autonome et indépendant, opérant sans influence de l'extérieur et sous un mode objectif. Nietzsche voit dans cette conception un mensonge niant la force extraordinaire de séduction qu'opèrent les idées, en particulier lorsqu'elles se présentent comme objectives mais en réaltité tirent leur force de le pouvoir consolateur.",
+                2: "Nietzsche choisit donc un mode d'exposition particulier pour sa pensée, en faisant tantôt appel à une forme poétique pour inspirer la glorification de l'existence à son lecteur tantôt à des discours rationnels classiques. Un effet pratique, produit par le discours poétique ou logique, est bien sûr attendu de la lecture de ses textes puisque toute idée cherche avant tout à séduire par tous les moyens disponibles."
+            }
+        },
+        3:{
+            t:"Nietzsche était nazi",
+            q:"La philosophie de Nietzsche est un soutien idéologique du régime nazi et de tous les va-t-'en-guerre.",
+            a:{
+                1:"La spoliation de l’héritage philosophique de Nietzsche par le régime nazi et les régimes fascistes s’est faite par l’intermédiaire des proches du philosophe qui ont falsifié son œuvre.",
+                2: "L’image de la guerre dans l’œuvre de Nietzsche est utilisée pour qualifier une guerre de l’esprit, menée contre les idéaux ascétiques. La récupération idéologique est également facilitée à cause des vocables nietzschéens de fort et faible, de ses critiques radicales de la démocratie et à cause de sa nouvelle manière de concevoir la langue philosophique."
+            }
+        },
+        4:{
+            t:"Nietzsche fait l'éloge de la violence",
+            q:"Le surhomme nietzschéen est l'apologie de la force brutale. Nietzsche prône la domination des forts sur les faibles, qu'il faudrait éliminer.",
+            a:{
+                1:"Les concepts de fort et de faible ne correspondent pas à des individus mais à des types humains relatifs. La force et la faiblesse ne sont pas des concepts liés à la force physique, bête et brutale, mais à la manière pour tel type humain d’intensifier la vie, de ne pas à avoir à se consoler d'exister.",
+                2:"Le type surhumain n’est pas celui qui est libéré de toute moralité. Il est celui qui, relativement aux types plus faibles, est capable de se surmonter en créant des formes de vie ne se reposant pas sur la condamnation de l'existence mais au contraire sur sa glorification."
+            }
+        },
+        5:{
+            t:"Nietzsche se contredit et relativise tout",
+            q:"Nietzsche se contredit car il affirme que la vérité n'existe pas. De la même manière, il relativise toutes les valeurs tout en prônant la venue du surhomme.",
+            a:{
+                1:"Nietzsche fait le constat d’une dépréciation des valeurs en cours dans l’Europe contemporaine. Cette vague de nihilisme est l'occasion pour ceux dont la tâche est de créer de nouvelles valeurs de proposer des interprétations de la réalité plus fidèles à la vie et moins contemptrices du corps.",
+                2:"Nietzsche met en doute la croyance selon laquelle la vérité est un point fixe invincible, une manière de se rapporter aux choses absolument valable dans tous les domaines. Or, les interprétations de la réalité (chrétiennes ou non) relèvent davantage de l’affectif et de la séduction, la vérité étant alors subordonnée à l'interprétation (inconsciente ou non) en vigueur chez l'individu."
+            }
+        },
     }
 }
 

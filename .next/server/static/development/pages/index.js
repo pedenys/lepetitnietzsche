@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -148,6 +148,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-prope
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "core-js/library/fn/object/get-own-property-symbols");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
 /*!********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
@@ -159,6 +170,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/values.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/values */ "core-js/library/fn/object/values");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/promise.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/promise.js ***!
@@ -167,6 +189,79 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "core-js/library/fn/promise");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectSpread; });
+/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
+/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+
+
+
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    var ownKeys = _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default()(source);
+
+    if (typeof _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default.a === 'function') {
+      ownKeys = ownKeys.concat(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default()(source).filter(function (sym) {
+        return _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default()(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      Object(_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
 
 /***/ }),
 
@@ -1781,6 +1876,74 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./src/components/Blockquote.tsx":
+/*!***************************************!*\
+  !*** ./src/components/Blockquote.tsx ***!
+  \***************************************/
+/*! exports provided: Blockquote, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Blockquote", function() { return Blockquote; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/Blockquote.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+class Blockquote extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+  constructor(props) {
+    super(props);
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleBlockQuoteHeight", ref => {
+      console.log('ref current', ref); // console.log('ref', ref.offsetHeight())
+      // storeBlockHeight(blockHeight)
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "toggleParagraph", () => {
+      console.log("🥉", this.blockquoteRef.current);
+    });
+
+    this.blockquoteRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+  }
+
+  render() {
+    return __jsx("div", {
+      onClick: this.toggleParagraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, __jsx("blockquote", {
+      ref: this.blockquoteRef,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, __jsx("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, this.props.title), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, "-> ", this.props.quote)));
+  }
+
+}
+/* harmony default export */ __webpack_exports__["default"] = (Blockquote);
+
+/***/ }),
+
 /***/ "./src/components/Footer.tsx":
 /*!***********************************!*\
   !*** ./src/components/Footer.tsx ***!
@@ -1796,7 +1959,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/pedenys/LePetitNietzsche/src/components/Footer.tsx";
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/Footer.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1885,7 +2048,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _resources_strings__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../resources/strings */ "./src/resources/strings.ts");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/pedenys/LePetitNietzsche/src/components/Header.tsx";
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/Header.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1961,7 +2124,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_GlobalStyleTheme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/GlobalStyleTheme */ "./src/styles/GlobalStyleTheme.ts");
 /* harmony import */ var _styles_myTheme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/myTheme */ "./src/styles/myTheme.ts");
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Header */ "./src/components/Header.tsx");
-var _jsxFileName = "/Users/pedenys/LePetitNietzsche/src/components/Layout.tsx";
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
@@ -2058,7 +2221,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/pedenys/LePetitNietzsche/src/components/Meta.tsx";
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/Meta.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2111,7 +2274,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/pedenys/LePetitNietzsche/src/components/PageTitle.tsx";
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/PageTitle.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2184,6 +2347,110 @@ const PageTitle = ({
 
 /***/ }),
 
+/***/ "./src/components/Quote.tsx":
+/*!**********************************!*\
+  !*** ./src/components/Quote.tsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/values */ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Blockquote__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Blockquote */ "./src/components/Blockquote.tsx");
+
+
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/Quote.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
+
+const QuoteContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+margin-bottom: 6rem;
+blockquote{
+        border-radius:5px;
+        background-color:${props => props.theme.colors.gray};
+        border-left: 5px solid ${props => props.theme.colors.blue};
+        font-family:"Space Mono", monospace;
+        margin:3rem 0;
+        padding-left: 2rem;
+        h2{
+            font-size:2.2rem;
+            color: ${props => props.theme.colors.blue};
+            margin: 1rem 0;
+            padding: 1rem 0 0 0;
+        }
+        p{
+            margin: 0 0 2rem 0;
+            padding: 0 0 2rem 0;
+            line-height:1.2;
+            font-size:2rem;
+        }
+    }
+`;
+const ParagraphContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+    p{
+        font-size:2rem;
+        line-height:1.6;
+    }
+`;
+
+const Quote = props => {
+  const {
+    0: showParagraph,
+    1: toggleParagraph
+  } = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false); // const [blockHeight, storeBlockHeight] = useState(0)
+
+  const _renderAnswer = () => {
+    let copy = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props.answer);
+
+    let arrayOfPargraph = _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(copy);
+
+    return arrayOfPargraph.map(paragraph => __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: undefined
+    }, paragraph));
+  };
+
+  return __jsx(QuoteContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: undefined
+  }, __jsx(_Blockquote__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: props.title,
+    quote: props.quote,
+    toggleParagraph: toggleParagraph,
+    showParagraph: showParagraph,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: undefined
+  }), props.answer && showParagraph ? __jsx(ParagraphContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: undefined
+  }, _renderAnswer()) : null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Quote);
+
+/***/ }),
+
 /***/ "./src/pages/index.tsx":
 /*!*****************************!*\
   !*** ./src/pages/index.tsx ***!
@@ -2198,35 +2465,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.tsx");
 /* harmony import */ var _components_PageTitle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/PageTitle */ "./src/components/PageTitle.tsx");
 /* harmony import */ var _resources_strings__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../resources/strings */ "./src/resources/strings.ts");
-var _jsxFileName = "/Users/pedenys/LePetitNietzsche/src/pages/index.tsx";
+/* harmony import */ var _components_Quote__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Quote */ "./src/components/Quote.tsx");
+var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
 
+
 const Index = () => {
+  const quote = _resources_strings__WEBPACK_IMPORTED_MODULE_3__["default"].quotes;
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Le Petit Nietzsche",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: undefined
   }, __jsx(_components_PageTitle__WEBPACK_IMPORTED_MODULE_2__["default"], {
     subTitle: _resources_strings__WEBPACK_IMPORTED_MODULE_3__["default"].howto,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: undefined
-  }), __jsx("p", {
+  }), __jsx(_components_Quote__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: quote[1].t,
+    quote: quote[1].q,
+    answer: quote[1].a,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: undefined
-  }, "HomePage\uD83D\uDC4B"));
+  }), __jsx(_components_Quote__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: quote[2].t,
+    quote: quote[2].q,
+    answer: quote[2].a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }), __jsx(_components_Quote__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: quote[3].t,
+    quote: quote[3].q,
+    answer: quote[3].a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }), __jsx(_components_Quote__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: quote[4].t,
+    quote: quote[4].q,
+    answer: quote[4].a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }), __jsx(_components_Quote__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: quote[5].t,
+    quote: quote[5].q,
+    answer: quote[5].a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -2275,6 +2584,48 @@ const fr = {
     2: {
       q: "Mentions légales",
       a: "<p>Le site lepetitnietzsche.fr est hébergé par 1&1 Internet SARL 7, place de la Gare BP 70109 57201 Sarreguemines Cedex – Code APE 6201Z. </p><p>Ce site et ses contenus sont fournis « en l’état », sans aucune garantie explicite ou tacite. Il peut présenter des inexactitudes, des erreurs, des omissions ou des problèmes techniques. Le site lepetitnietzsche.fr ne saurait être tenu responsable des problèmes rencontrés lors de l’utilisation du site.</p>"
+    }
+  },
+  quotes: {
+    1: {
+      t: "Nietzsche était fou",
+      q: "En janvier 1889, Nietzsche a embrassé un cheval dans une rue de Turin parce qu’il était devenu fou. Sa philosophie délirante a causé sa maladie psychologique.",
+      a: {
+        1: "La légende du cheval n'a jamais été confirmée. Le Dr. Wille, médecin de l’hopital de Bâle qui recueillit Nietzsche après son effondrement, parle dans son rapport d’une « paralysie progressive ». L’origine de la maladie de Nietzsche est donc organique, non psychologique.",
+        2: "Ses développements philosophiques ne peuvent ainsi pas être la cause de sa maladie. En effet, si le sentiment d’être détenteur d’une mission capitale, la remise en cause des dichotomies les plus habituelles de la raison, la critique de la culture occidentale sont des traits de folie, alors il faudrait avancer que Nietzsche est fou depuis ses premiers écrits philosophiques. Or jusqu’à la veille de son effondrement, Nietzsche continue de rester maître de sa prose, usant entre autres de méthodes de raisonnement classiques et largement partagées par la tradition philosophique. Dès janvier 1889, Nietzsche cesse d’écrire."
+      }
+    },
+    2: {
+      t: "Nietzsche n'est pas vraiment un philosophe",
+      q: "Nietzsche était plus un poète qu'un philosophe authentique. Il avait des intuitions géniales mais était incapable de les justifier rationnellement.",
+      a: {
+        1: "La tradition philosophique a défini les idées comme appartenant à un domaine autonome et indépendant, opérant sans influence de l'extérieur et sous un mode objectif. Nietzsche voit dans cette conception un mensonge niant la force extraordinaire de séduction qu'opèrent les idées, en particulier lorsqu'elles se présentent comme objectives mais en réaltité tirent leur force de le pouvoir consolateur.",
+        2: "Nietzsche choisit donc un mode d'exposition particulier pour sa pensée, en faisant tantôt appel à une forme poétique pour inspirer la glorification de l'existence à son lecteur tantôt à des discours rationnels classiques. Un effet pratique, produit par le discours poétique ou logique, est bien sûr attendu de la lecture de ses textes puisque toute idée cherche avant tout à séduire par tous les moyens disponibles."
+      }
+    },
+    3: {
+      t: "Nietzsche était nazi",
+      q: "La philosophie de Nietzsche est un soutien idéologique du régime nazi et de tous les va-t-'en-guerre.",
+      a: {
+        1: "La spoliation de l’héritage philosophique de Nietzsche par le régime nazi et les régimes fascistes s’est faite par l’intermédiaire des proches du philosophe qui ont falsifié son œuvre.",
+        2: "L’image de la guerre dans l’œuvre de Nietzsche est utilisée pour qualifier une guerre de l’esprit, menée contre les idéaux ascétiques. La récupération idéologique est également facilitée à cause des vocables nietzschéens de fort et faible, de ses critiques radicales de la démocratie et à cause de sa nouvelle manière de concevoir la langue philosophique."
+      }
+    },
+    4: {
+      t: "Nietzsche fait l'éloge de la violence",
+      q: "Le surhomme nietzschéen est l'apologie de la force brutale. Nietzsche prône la domination des forts sur les faibles, qu'il faudrait éliminer.",
+      a: {
+        1: "Les concepts de fort et de faible ne correspondent pas à des individus mais à des types humains relatifs. La force et la faiblesse ne sont pas des concepts liés à la force physique, bête et brutale, mais à la manière pour tel type humain d’intensifier la vie, de ne pas à avoir à se consoler d'exister.",
+        2: "Le type surhumain n’est pas celui qui est libéré de toute moralité. Il est celui qui, relativement aux types plus faibles, est capable de se surmonter en créant des formes de vie ne se reposant pas sur la condamnation de l'existence mais au contraire sur sa glorification."
+      }
+    },
+    5: {
+      t: "Nietzsche se contredit et relativise tout",
+      q: "Nietzsche se contredit car il affirme que la vérité n'existe pas. De la même manière, il relativise toutes les valeurs tout en prônant la venue du surhomme.",
+      a: {
+        1: "Nietzsche fait le constat d’une dépréciation des valeurs en cours dans l’Europe contemporaine. Cette vague de nihilisme est l'occasion pour ceux dont la tâche est de créer de nouvelles valeurs de proposer des interprétations de la réalité plus fidèles à la vie et moins contemptrices du corps.",
+        2: "Nietzsche met en doute la croyance selon laquelle la vérité est un point fixe invincible, une manière de se rapporter aux choses absolument valable dans tous les domaines. Or, les interprétations de la réalité (chrétiennes ou non) relèvent davantage de l’affectif et de la séduction, la vérité étant alors subordonnée à l'interprétation (inconsciente ou non) en vigueur chez l'individu."
+      }
     }
   }
 };
@@ -2427,6 +2778,7 @@ const myTheme = {
   colors: {
     black: '#444',
     blue: '#00007F',
+    darkgray: '#AAA',
     gray: '#EFEFEF',
     white: '#FFF'
   },
@@ -2440,14 +2792,14 @@ const myTheme = {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/pedenys/LePetitNietzsche/src/pages/index.tsx */"./src/pages/index.tsx");
+module.exports = __webpack_require__(/*! /Users/pierre-emmanueldenys/lepetitnietzsche/src/pages/index.tsx */"./src/pages/index.tsx");
 
 
 /***/ }),
@@ -2507,6 +2859,17 @@ module.exports = require("core-js/library/fn/object/get-own-property-descriptor"
 
 /***/ }),
 
+/***/ "core-js/library/fn/object/get-own-property-symbols":
+/*!*********************************************************************!*\
+  !*** external "core-js/library/fn/object/get-own-property-symbols" ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-own-property-symbols");
+
+/***/ }),
+
 /***/ "core-js/library/fn/object/keys":
 /*!*************************************************!*\
   !*** external "core-js/library/fn/object/keys" ***!
@@ -2515,6 +2878,17 @@ module.exports = require("core-js/library/fn/object/get-own-property-descriptor"
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/keys");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/values":
+/*!***************************************************!*\
+  !*** external "core-js/library/fn/object/values" ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/values");
 
 /***/ }),
 

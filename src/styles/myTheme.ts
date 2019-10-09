@@ -4,6 +4,7 @@ const myTheme: DefaultTheme = {
     colors: {
         black: '#444',
         blue: '#00007F',
+        darkgray:'#AAA',
         gray: '#EFEFEF',
         white: '#FFF',
     },
