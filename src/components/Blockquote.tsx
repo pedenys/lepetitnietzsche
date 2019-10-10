@@ -5,10 +5,10 @@ interface BlockQuoteProps {
     title:string,
     quote:string,
     showParagraph:boolean,
-    toggleParagraph: () => {}
+    toggleParagraph: ()=> void
 }
 
-export class Blockquote extends React.Component {
+export class Blockquote extends React.Component<BlockQuoteProps> {
     constructor(props:BlockQuoteProps){
         super(props);
         this.blockquoteRef = React.createRef()
@@ -16,21 +16,27 @@ export class Blockquote extends React.Component {
 
     blockquoteRef:any
 
-    handleBlockQuoteHeight = (ref:any):void => {
-        console.log('ref current', ref)
+    handleBlockQuoteHeight = ():void => {
+        console.log('ref current', this.blockquoteRef)
         // console.log('ref', ref.offsetHeight())
         // storeBlockHeight(blockHeight)
     }
 
     toggleParagraph =  ():void => {
-        console.log("🥉",this.blockquoteRef.current)
+        if(!this.props.showParagraph){
+            window.scroll(0,this.blockquoteRef.current.offsetHeight)
+        }
+        else{
+            window.scroll(0,this.blockquoteRef.current.offsetHeight)
+        }
+        this.props.toggleParagraph()
     }
  
     render() {
         
         return (
             <div
-                onClick={this.toggleParagraph}
+                onClick={() => this.toggleParagraph()}
             >
                 <blockquote 
                     ref={this.blockquoteRef} 

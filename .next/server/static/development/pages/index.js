@@ -1897,13 +1897,19 @@ class Blockquote extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
   constructor(props) {
     super(props);
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleBlockQuoteHeight", ref => {
-      console.log('ref current', ref); // console.log('ref', ref.offsetHeight())
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleBlockQuoteHeight", () => {
+      console.log('ref current', this.blockquoteRef); // console.log('ref', ref.offsetHeight())
       // storeBlockHeight(blockHeight)
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "toggleParagraph", () => {
-      console.log("🥉", this.blockquoteRef.current);
+      if (!this.props.showParagraph) {
+        window.scroll(0, this.blockquoteRef.current.offsetHeight);
+      } else {
+        window.scroll(0, this.blockquoteRef.current.offsetHeight);
+      }
+
+      this.props.toggleParagraph();
     });
 
     this.blockquoteRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
@@ -1911,29 +1917,29 @@ class Blockquote extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
 
   render() {
     return __jsx("div", {
-      onClick: this.toggleParagraph,
+      onClick: () => this.toggleParagraph(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 38
       },
       __self: this
     }, __jsx("blockquote", {
       ref: this.blockquoteRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 41
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 44
       },
       __self: this
     }, this.props.title), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 45
       },
       __self: this
     }, "-> ", this.props.quote)));
@@ -2359,20 +2365,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/values */ "./node_modules/@babel/runtime-corejs2/core-js/object/values.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Blockquote__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Blockquote */ "./src/components/Blockquote.tsx");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Blockquote__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Blockquote */ "./src/components/Blockquote.tsx");
+
 
 
 var _jsxFileName = "/Users/pierre-emmanueldenys/lepetitnietzsche/src/components/Quote.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 
-
-const QuoteContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+const QuoteContainer = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
 margin-bottom: 6rem;
 blockquote{
         border-radius:5px;
@@ -2395,57 +2402,73 @@ blockquote{
         }
     }
 `;
-const ParagraphContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+const ParagraphContainer = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
     p{
         font-size:2rem;
         line-height:1.6;
     }
 `;
 
-const Quote = props => {
-  const {
-    0: showParagraph,
-    1: toggleParagraph
-  } = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false); // const [blockHeight, storeBlockHeight] = useState(0)
+class Quote extends react__WEBPACK_IMPORTED_MODULE_3___default.a.Component {
+  constructor(...args) {
+    super(...args);
 
-  const _renderAnswer = () => {
-    let copy = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props.answer);
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "state", {
+      showParagraph: false
+    });
 
-    let arrayOfPargraph = _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(copy);
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "_renderAnswer", () => {
+      let copy = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, this.props.answer);
 
-    return arrayOfPargraph.map(paragraph => __jsx("p", {
+      let arrayOfPargraph = _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(copy);
+
+      return arrayOfPargraph.map(paragraph => __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, paragraph));
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "toggleParagraph", () => {
+      this.setState({
+        showParagraph: !this.state.showParagraph
+      });
+    });
+  }
+
+  render() {
+    const props = this.props;
+    const {
+      showParagraph
+    } = this.state;
+    return __jsx(QuoteContainer, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 66
       },
-      __self: undefined
-    }, paragraph));
-  };
+      __self: this
+    }, __jsx(_Blockquote__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      title: props.title,
+      quote: props.quote,
+      toggleParagraph: this.toggleParagraph,
+      showParagraph: this.state.showParagraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }), props.answer && showParagraph ? __jsx(ParagraphContainer, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 75
+      },
+      __self: this
+    }, this._renderAnswer()) : null);
+  }
 
-  return __jsx(QuoteContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: undefined
-  }, __jsx(_Blockquote__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    title: props.title,
-    quote: props.quote,
-    toggleParagraph: toggleParagraph,
-    showParagraph: showParagraph,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  }), props.answer && showParagraph ? __jsx(ParagraphContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
-  }, _renderAnswer()) : null);
-};
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Quote);
 

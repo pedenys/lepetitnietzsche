@@ -1,4 +1,4 @@
-import {useState} from 'react'
+
 import React from 'react'
 import styled from 'styled-components'
 import Blockquote from './Blockquote'
@@ -40,35 +40,47 @@ interface QuoteProps {
     answer:any,
 }
 
-const Quote:any = (props:QuoteProps) => {
+class Quote extends React.Component<QuoteProps> {
+    state = {
+        showParagraph:false
+    }
+    
+    
 
-    const [showParagraph, toggleParagraph] = useState(false)
-    // const [blockHeight, storeBlockHeight] = useState(0)
-
-    const _renderAnswer = ():JSX.Element[] => {
-        let copy = {...props.answer};
+    _renderAnswer = ():JSX.Element[] => {
+        let copy = {...this.props.answer};
         let arrayOfPargraph = Object.values(copy);
         return arrayOfPargraph.map((paragraph:any) => <p>{paragraph}</p>)
     }
 
-    return (
-        <QuoteContainer>
+    toggleParagraph = ():void => {
+        this.setState({
+            showParagraph:!this.state.showParagraph
+        })
+    }
+
+    render(){
+        const props = this.props
+        const {showParagraph} = this.state
+        return (
+            <QuoteContainer>
             <Blockquote 
                 title={props.title}
                 quote={props.quote}
-                toggleParagraph={toggleParagraph} 
-                showParagraph={showParagraph}
-            />
+                toggleParagraph={this.toggleParagraph} 
+                showParagraph={this.state.showParagraph}
+                />
             {
                 props.answer && showParagraph ?
                 <ParagraphContainer>
-                {_renderAnswer()}
+                    {this._renderAnswer()}
                 </ParagraphContainer>
                 :
                 null
             }
         </QuoteContainer>
     )
+}
 }
 
 export default Quote
