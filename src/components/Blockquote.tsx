@@ -18,8 +18,6 @@ export class Blockquote extends React.Component<BlockQuoteProps> {
 
     handleBlockQuoteHeight = ():void => {
         console.log('ref current', this.blockquoteRef)
-        // console.log('ref', ref.offsetHeight())
-        // storeBlockHeight(blockHeight)
     }
 
     toggleParagraph =  ():void => {

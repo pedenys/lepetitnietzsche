@@ -1898,8 +1898,7 @@ class Blockquote extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
     super(props);
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "handleBlockQuoteHeight", () => {
-      console.log('ref current', this.blockquoteRef); // console.log('ref', ref.offsetHeight())
-      // storeBlockHeight(blockHeight)
+      console.log('ref current', this.blockquoteRef);
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "toggleParagraph", () => {
@@ -1920,26 +1919,26 @@ class Blockquote extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
       onClick: () => this.toggleParagraph(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 36
       },
       __self: this
     }, __jsx("blockquote", {
       ref: this.blockquoteRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 39
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 42
       },
       __self: this
     }, this.props.title), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 43
       },
       __self: this
     }, "-> ", this.props.quote)));
