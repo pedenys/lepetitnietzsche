@@ -1902,12 +1902,6 @@ class Blockquote extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "toggleParagraph", () => {
-      if (!this.props.showParagraph) {
-        window.scroll(0, this.blockquoteRef.current.offsetHeight);
-      } else {
-        window.scroll(0, this.blockquoteRef.current.offsetHeight);
-      }
-
       this.props.toggleParagraph();
     });
 
@@ -1919,26 +1913,26 @@ class Blockquote extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
       onClick: () => this.toggleParagraph(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 30
       },
       __self: this
     }, __jsx("blockquote", {
       ref: this.blockquoteRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 33
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 36
       },
       __self: this
     }, this.props.title), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 37
       },
       __self: this
     }, "-> ", this.props.quote)));
@@ -2409,8 +2403,8 @@ const ParagraphContainer = styled_components__WEBPACK_IMPORTED_MODULE_4___defaul
 `;
 
 class Quote extends react__WEBPACK_IMPORTED_MODULE_3___default.a.Component {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(props);
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "state", {
       showParagraph: false
@@ -2424,7 +2418,7 @@ class Quote extends react__WEBPACK_IMPORTED_MODULE_3___default.a.Component {
       return arrayOfPargraph.map(paragraph => __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 57
         },
         __self: this
       }, paragraph));
@@ -2433,8 +2427,15 @@ class Quote extends react__WEBPACK_IMPORTED_MODULE_3___default.a.Component {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "toggleParagraph", () => {
       this.setState({
         showParagraph: !this.state.showParagraph
+      }, () => {
+        if (this.pRef) {
+          console.log('👨‍🚀', this.pRef);
+          window.scroll(0, this.pRef.offsetHeight);
+        }
       });
     });
+
+    this.pRef = react__WEBPACK_IMPORTED_MODULE_3___default.a.createRef();
   }
 
   render() {
@@ -2445,7 +2446,7 @@ class Quote extends react__WEBPACK_IMPORTED_MODULE_3___default.a.Component {
     return __jsx(QuoteContainer, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 77
       },
       __self: this
     }, __jsx(_Blockquote__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -2455,16 +2456,23 @@ class Quote extends react__WEBPACK_IMPORTED_MODULE_3___default.a.Component {
       showParagraph: this.state.showParagraph,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 78
       },
       __self: this
-    }), props.answer && showParagraph ? __jsx(ParagraphContainer, {
+    }), __jsx("div", {
+      ref: this.pRef,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 84
       },
       __self: this
-    }, this._renderAnswer()) : null);
+    }, props.answer && showParagraph ? __jsx(ParagraphContainer, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 88
+      },
+      __self: this
+    }, this._renderAnswer()) : null));
   }
 
 }

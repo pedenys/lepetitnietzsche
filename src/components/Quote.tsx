@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import Blockquote from './Blockquote'
@@ -41,11 +40,16 @@ interface QuoteProps {
 }
 
 class Quote extends React.Component<QuoteProps> {
+    constructor(props:QuoteProps){
+        super(props);
+        this.pRef = React.createRef()
+    }
+    
     state = {
         showParagraph:false
     }
-    
-    
+
+    pRef:any
 
     _renderAnswer = ():JSX.Element[] => {
         let copy = {...this.props.answer};
@@ -56,12 +60,19 @@ class Quote extends React.Component<QuoteProps> {
     toggleParagraph = ():void => {
         this.setState({
             showParagraph:!this.state.showParagraph
+        }, 
+        () => {
+            if(this.pRef) {
+                console.log('👨‍🚀',this.pRef)
+                window.scroll(0,this.pRef.offsetHeight)
+            }
         })
     }
 
     render(){
         const props = this.props
         const {showParagraph} = this.state
+
         return (
             <QuoteContainer>
             <Blockquote 
@@ -70,14 +81,17 @@ class Quote extends React.Component<QuoteProps> {
                 toggleParagraph={this.toggleParagraph} 
                 showParagraph={this.state.showParagraph}
                 />
+                <div ref={this.pRef}>
             {
                 props.answer && showParagraph ?
+                
                 <ParagraphContainer>
                     {this._renderAnswer()}
                 </ParagraphContainer>
                 :
                 null
             }
+            </div>
         </QuoteContainer>
     )
 }

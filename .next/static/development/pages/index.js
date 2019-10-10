@@ -14533,12 +14533,6 @@ function (_React$Component) {
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "toggleParagraph", function () {
-      if (!_this.props.showParagraph) {
-        window.scroll(0, _this.blockquoteRef.current.offsetHeight);
-      } else {
-        window.scroll(0, _this.blockquoteRef.current.offsetHeight);
-      }
-
       _this.props.toggleParagraph();
     });
 
@@ -14557,26 +14551,26 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 30
         },
         __self: this
       }, __jsx("blockquote", {
         ref: this.blockquoteRef,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 33
         },
         __self: this
       }, __jsx("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 36
         },
         __self: this
       }, this.props.title), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 37
         },
         __self: this
       }, "-> ", this.props.quote)));
@@ -15091,18 +15085,12 @@ var Quote =
 function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Quote, _React$Component);
 
-  function Quote() {
-    var _getPrototypeOf2;
-
+  function Quote(props) {
     var _this;
 
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Quote);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Quote)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Quote).call(this, props));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "state", {
       showParagraph: false
@@ -15117,7 +15105,7 @@ function (_React$Component) {
         return __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 57
           },
           __self: this
         }, paragraph);
@@ -15127,9 +15115,15 @@ function (_React$Component) {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "toggleParagraph", function () {
       _this.setState({
         showParagraph: !_this.state.showParagraph
+      }, function () {
+        if (_this.pRef) {
+          console.log('👨‍🚀', _this.pRef);
+          window.scroll(0, _this.pRef.offsetHeight);
+        }
       });
     });
 
+    _this.pRef = react__WEBPACK_IMPORTED_MODULE_10___default.a.createRef();
     return _this;
   }
 
@@ -15141,7 +15135,7 @@ function (_React$Component) {
       return __jsx(QuoteContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 77
         },
         __self: this
       }, __jsx(_Blockquote__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -15151,16 +15145,23 @@ function (_React$Component) {
         showParagraph: this.state.showParagraph,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 78
         },
         __self: this
-      }), props.answer && showParagraph ? __jsx(ParagraphContainer, {
+      }), __jsx("div", {
+        ref: this.pRef,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 84
         },
         __self: this
-      }, this._renderAnswer()) : null);
+      }, props.answer && showParagraph ? __jsx(ParagraphContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        },
+        __self: this
+      }, this._renderAnswer()) : null));
     }
   }]);
 

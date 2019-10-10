@@ -21,12 +21,6 @@ export class Blockquote extends React.Component<BlockQuoteProps> {
     }
 
     toggleParagraph =  ():void => {
-        if(!this.props.showParagraph){
-            window.scroll(0,this.blockquoteRef.current.offsetHeight)
-        }
-        else{
-            window.scroll(0,this.blockquoteRef.current.offsetHeight)
-        }
         this.props.toggleParagraph()
     }
  
