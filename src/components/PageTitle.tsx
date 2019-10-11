@@ -24,12 +24,13 @@ const PageTitleInner = styled.div<PageTitleProps>`
         padding:0.1rem 0;
         color:${props => props.theme.colors.blue};
         font-weight:${props => props.title ? '500' : '200'};
+        line-height:2rem;
     }
     @media screen and (max-width: ${props => props.theme.mobileBreakpoint}){
         min-width:100%;
         width:100%;
         p {
-            font-size:2rem;
+            font-size:1.6rem;
             line-height:1;
             padding:1rem 0;
         }
@@ -37,11 +38,23 @@ const PageTitleInner = styled.div<PageTitleProps>`
 `
 
 type PageTitleProps = {
-    title?: string,
-    subTitle?: string
+    title?: any,
+    subTitle?: string | string[],
+
 }
 
 const PageTitle: React.FunctionComponent<PageTitleProps> = ({ title, subTitle }) => {
+
+    // if multiple paragraphs to render, map over it
+    const _renderTextContent = (arg: string | string[]) => {
+        if (typeof arg === 'object') {
+            const arrayOfArg = Object.values(arg)
+            return arrayOfArg.length && arrayOfArg.length > 1 ? arrayOfArg.map(p => <p>{p}</p>) : null
+        }
+        else if (typeof arg === 'string') {
+            return <p>{arg}</p>
+        }
+    }
 
     return (
         <PageTitleContainer>
@@ -49,7 +62,7 @@ const PageTitle: React.FunctionComponent<PageTitleProps> = ({ title, subTitle })
                 title={title}
                 subTitle={subTitle}
             >
-                <p dangerouslySetInnerHTML={{ __html: title ? title : subTitle ? subTitle : ' ' }} />
+                {_renderTextContent(title ? title : subTitle ? subTitle : ' ')}
             </PageTitleInner>
         </PageTitleContainer>
     )

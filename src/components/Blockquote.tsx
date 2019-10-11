@@ -2,41 +2,41 @@ import React from 'react'
 
 
 interface BlockQuoteProps {
-    title:string,
-    quote:string,
-    showParagraph:boolean,
-    toggleParagraph: ()=> void
+    title: string,
+    quote: string,
+    showParagraph: boolean,
+    toggleParagraph: () => void
 }
 
 export class Blockquote extends React.Component<BlockQuoteProps> {
-    constructor(props:BlockQuoteProps){
+    constructor(props: BlockQuoteProps) {
         super(props);
         this.blockquoteRef = React.createRef()
     }
 
-    blockquoteRef:any
+    blockquoteRef: any
 
-    handleBlockQuoteHeight = ():void => {
+    handleBlockQuoteHeight = (): void => {
         console.log('ref current', this.blockquoteRef)
     }
 
-    toggleParagraph =  ():void => {
+    toggleParagraph = (): void => {
         this.props.toggleParagraph()
     }
- 
+
     render() {
-        
+
         return (
             <div
                 onClick={() => this.toggleParagraph()}
             >
-                <blockquote 
-                    ref={this.blockquoteRef} 
+                <blockquote
+                    ref={this.blockquoteRef}
                 >
-                <h2>{this.props.title}</h2>
-                <p>-> {this.props.quote}</p>
-            </blockquote>
-            </div>
+                    <h2>{this.props.title}</h2>
+                    {!this.props.showParagraph ? <p> -> {this.props.quote}</p> : null}
+                </blockquote>
+            </div >
         )
     }
 }

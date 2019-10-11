@@ -77,6 +77,7 @@ const GlobalStyleTHeme = createGlobalStyle`
     html{
         box-sizing:border-box;
         font-size:10px;
+        scroll-behavior:smooth;
     }
     *, *:before,*:after{
         box-sizing:inherit;
