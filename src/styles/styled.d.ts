@@ -5,16 +5,17 @@ import 'styled-components'
 declare module 'styled-components' {
     export interface DefaultTheme {
         colors: {
-            black: string,
-            blue: string,
-            darkgray:string,
-            gray: string,
+            black: string
+            blue: string
+            darkgray: string
+            gray: string
+            lightblue: string
             white: string
         }
-        mb: string,
-        borderWide: string,
-        maxWidth: string,
-        mbBetweenParagraphs: string,
+        mb: string
+        borderWide: string
+        maxWidth: string
+        mbBetweenParagraphs: string
         mobileBreakpoint: string
     }
 }
