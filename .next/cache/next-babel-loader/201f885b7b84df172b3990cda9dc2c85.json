@@ -1,0 +1,1 @@
+{"ast":null,"code":"const myTheme = {\n  colors: {\n    black: '#444',\n    blue: '#00007F',\n    darkgray: '#AAA',\n    gray: '#EFEFEF',\n    white: '#FFF'\n  },\n  borderWide: `3px solid #00007F`,\n  mb: '2rem',\n  maxWidth: '1000px',\n  mbBetweenParagraphs: '1.6rem',\n  mobileBreakpoint: '600px'\n};\nexport default myTheme;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import fr from './fr';\nconst strings = fr;\nexport default strings;","map":null,"metadata":{},"sourceType":"module"}

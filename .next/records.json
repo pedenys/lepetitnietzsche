@@ -1,0 +1,31 @@
+{
+  "modules": {
+    "byIdentifier": {},
+    "usedIds": {}
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/runtime/main.js": 2,
+      "static/yllu3nS-TTo9BgzE59H_S/pages/_app.js": 3,
+      "static/yllu3nS-TTo9BgzE59H_S/pages/_error.js": 4,
+      "static/yllu3nS-TTo9BgzE59H_S/pages/about.js": 5,
+      "static/yllu3nS-TTo9BgzE59H_S/pages/index.js": 6,
+      "static/yllu3nS-TTo9BgzE59H_S/pages/licence.js": 7,
+      "static/yllu3nS-TTo9BgzE59H_S/pages/post.js": 8
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+}
