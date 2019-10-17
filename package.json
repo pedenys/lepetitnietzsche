@@ -4,7 +4,6 @@
     "description": "le petit nietzsche website powered by Nextjs",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "next",
         "build": "next build",
         "export": "next export",
