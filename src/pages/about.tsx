@@ -3,7 +3,7 @@ import PageTitle from '../components/PageTitle'
 import TextBlock from '../components/TextBlock'
 import strings from '../resources/strings'
 
-const title = 'À propos'
+const title: string = 'À propos'
 
 const About: React.FunctionComponent = () => {
     const s = strings.about

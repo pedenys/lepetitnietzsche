@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "lepetitnietzsche",
   "version": "1.0.0",
   "description": "le petit nietzsche website powered by Nextjs",
@@ -27,4 +28,34 @@
     "@zeit/next-typescript": "1.1.1",
     "typescript": "^3.6.3"
   }
+=======
+    "name": "lepetitnietzsche",
+    "version": "1.0.0",
+    "description": "le petit nietzsche website powered by Nextjs",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "export": "next export",
+        "deploy": "npm run build && npm run export"
+    },
+    "keywords": [
+        "nextjs"
+    ],
+    "author": "apolineaire",
+    "license": "ISC",
+    "dependencies": {
+        "next": "9.0.7",
+        "react": "16.10.2",
+        "react-dom": "16.10.2",
+        "styled-components": "4.4.0"
+    },
+    "devDependencies": {
+        "@types/next": "8.0.6",
+        "@types/react": "16.9.5",
+        "@types/styled-components": "4.1.19",
+        "@zeit/next-typescript": "1.1.1",
+        "typescript": "^3.6.3"
+    }
+>>>>>>> bf7e3e04fed9f500637d8c46782f303113b50555
 }

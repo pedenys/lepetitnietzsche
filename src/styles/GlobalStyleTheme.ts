@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyleTHeme = createGlobalStyle`
     /* Fonts declaration */
@@ -77,6 +77,7 @@ const GlobalStyleTHeme = createGlobalStyle`
     html{
         box-sizing:border-box;
         font-size:10px;
+        scroll-behavior:smooth;
     }
     *, *:before,*:after{
         box-sizing:inherit;
@@ -97,7 +98,25 @@ const GlobalStyleTHeme = createGlobalStyle`
         color:${props => props.theme.colors.black} !important;
     }
     a:visited{
-        color: inherit;
+        color: ${props => props.theme.colors.lightblue}     ;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
     }
 `
 
