@@ -1,21 +1,22 @@
 {
   "name": "lepetitnietzsche",
   "version": "1.0.0",
-  "description": "le petit nietzsche website powered by Nextjs",
+  "description": "lepetitnietzsche.fr website powered by Nextjs",
   "main": "index.js",
   "scripts": {
     "dev": "next",
+    "deploy": "npm run build && npm run export",
     "build": "next build",
     "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "start": "next start"
   },
   "keywords": [
     "nextjs"
   ],
-  "author": "apolineaire",
+  "author": "pedenys",
   "license": "ISC",
   "dependencies": {
-    "next": "9.0.7",
+    "next": "10.0.0",
     "react": "16.10.2",
     "react-dom": "16.10.2",
     "styled-components": "4.4.0"
