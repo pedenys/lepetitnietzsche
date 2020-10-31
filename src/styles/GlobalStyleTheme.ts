@@ -3,24 +3,25 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyleTHeme = createGlobalStyle`
     /* Fonts declaration */
     @font-face {
-    font-family: 'Space Mono';
-    src: url('/static/fonts/SpaceMono-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
+        font-family: 'Space Mono';
+        src: url('/static/fonts/SpaceMono-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
     }
-
     @font-face {
         font-family: 'Space Mono';
-        src: url('/static/fonts/SpaceMono-Italic.woff') format('woff');
+        src:url('/static/fonts/SpaceMono-Regular.woff') format('woff');
         font-weight: normal;
-        font-style: italic;
+        font-style: normal;
+        font-display: swap;
     }
-
     @font-face {
         font-family: 'Eczar';
         src: url('/static/fonts/Eczar-Bold.woff') format('woff');
         font-weight: bold;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -28,6 +29,7 @@ const GlobalStyleTHeme = createGlobalStyle`
         src: url('/static/fonts/Eczar-Medium.woff') format('woff');
         font-weight: 500;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -35,34 +37,7 @@ const GlobalStyleTHeme = createGlobalStyle`
         src: url('/static/fonts/Eczar-Regular.woff') format('woff');
         font-weight: normal;
         font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Eczar';
-        src: url('/static/fonts/Eczar-ExtraBold.woff') format('woff');
-        font-weight: 800;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Space Mono';
-        src: url('/static/fonts/SpaceMono-Bold.woff') format('woff');
-        font-weight: bold;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Space Mono';
-        src:url('/static/fonts/SpaceMono-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Eczar';
-        src:url('/static/fonts/Eczar-SemiBold.woff') format('woff');
-        font-weight: 600;
-        font-style: normal;
+        font-display: swap;
     }
 
     html{
