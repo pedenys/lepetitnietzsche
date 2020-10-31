@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "next": "10.0.0",
+    "next-offline": "^5.0.2",
     "react": "16.10.2",
     "react-dom": "16.10.2",
     "styled-components": "4.4.0"

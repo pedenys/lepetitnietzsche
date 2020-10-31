@@ -1,10 +1,7 @@
-// const withTypescript = require('@zeit/next-typescript')
+const withOffline = require("next-offline");
 
-// module.exports = withTypescript({
-//     webpack(config, options) {
-//         return config
-//     }
-// })
-module.exports = {
-    distDir: 'build',
-}
+const nextConfig = {
+  distDir: "build",
+};
+
+module.exports = withOffline(nextConfig);
