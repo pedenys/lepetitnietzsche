@@ -23,7 +23,10 @@ export default class MyDocument extends Document {
     return (
       <html lang="fr">
         <Head>
-        <meta name="Description" content="Ce site combat certaines idées reçues sur le philosophe Friedrich Nietzsche.">
+          <meta
+            name="Description"
+            content="Ce site combat certaines idées reçues sur le philosophe Friedrich Nietzsche."
+          ></meta>
           {this.props.styleTags}
           <link rel="shortcut icon" href="/static/favicon.png" />
         </Head>
