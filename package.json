@@ -4,11 +4,14 @@
   "description": "lepetitnietzsche.fr website powered by Nextjs",
   "main": "index.js",
   "scripts": {
+    "commit": "cz",
+    "cypress:open": "cypress open",
     "dev": "next",
-    "deploy": "npm run build && npm run export",
+    "deploy": "yarn build && yarn export",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "test": "start-server-and-test dev 3000 cypress:open"
   },
   "keywords": [
     "nextjs"
@@ -27,6 +30,14 @@
     "@types/react": "16.9.5",
     "@types/styled-components": "4.1.19",
     "@zeit/next-typescript": "1.1.1",
+    "cypress": "8.3.1",
+    "cz-conventional-changelog": "3.3.0",
+    "start-server-and-test": "1.14.0",
     "typescript": "4.4.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
