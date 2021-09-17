@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-type FooterProps = {
+type Props = {
   year: string;
 };
 
@@ -18,7 +18,7 @@ const FooterContainer = styled.div`
   }
 `;
 
-const Footer: React.FunctionComponent<FooterProps> = ({ year }) => {
+const Footer = ({ year }: Props) => {
   return (
     <FooterContainer>
       <footer>

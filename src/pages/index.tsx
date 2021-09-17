@@ -1,40 +1,36 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import PageTitle from '../components/PageTitle'
-import strings from '../resources/strings'
-import Quote from '../components/Quote'
+import React from "react";
+import Layout from "@components/Layout";
+import PageTitle from "@components/PageTitle";
+import strings from "../resources/strings";
+import Quote from "@components/Quote";
+import { fetchHomeData, PrejudiceApi } from "@services/homeQueries";
+import { RichText } from "prismic-reactjs";
 
-const Index: React.FunctionComponent = () => {
-    const quote = strings.quotes
-    return (
-        <Layout title="Le Petit Nietzsche">
-            <PageTitle subTitle={strings.howto} />
-            <Quote 
-                title={quote[1].t}
-                quote={quote[1].q}
-                answer={quote[1].a}
-            />
-            <Quote 
-                title={quote[2].t}
-                quote={quote[2].q}
-                answer={quote[2].a}
-            />
-            <Quote 
-                title={quote[3].t}
-                quote={quote[3].q}
-                answer={quote[3].a}
-            />
-            <Quote 
-                title={quote[4].t}
-                quote={quote[4].q}
-                answer={quote[4].a}
-            />
-            <Quote 
-                title={quote[5].t}
-                quote={quote[5].q}
-                answer={quote[5].a}
-            />
-        </Layout>
-    )
+interface Props {
+  allPrejudices: PrejudiceApi[];
 }
-export default Index
+
+const Home = ({ allPrejudices }: Props) => {
+  return (
+    <Layout title="Le petit Nietzsche">
+      <PageTitle subTitle={strings.howto} />
+      {allPrejudices.map((prejudice: PrejudiceApi) => (
+        <Quote
+          title={RichText.asText(prejudice.node.title)}
+          quote={RichText.asText(prejudice.node.prejudice)}
+          explanations={prejudice.node.explanation}
+        />
+      ))}
+    </Layout>
+  );
+};
+
+export default Home;
+
+export async function getStaticProps() {
+  const allPrejudices = await fetchHomeData();
+
+  return {
+    props: { allPrejudices },
+  };
+}
