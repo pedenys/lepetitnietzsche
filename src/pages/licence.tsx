@@ -1,27 +1,20 @@
-import Layout from '../components/Layout'
-import PageTitle from '../components/PageTitle'
-import TextBlock from '../components/TextBlock'
-import strings from '../resources/strings'
+import Layout from "../components/Layout";
+import PageTitle from "../components/PageTitle";
+import TextBlock from "../components/TextBlock";
+import strings from "../resources/strings";
 
-const title = 'Licence'
+const title = "Licence";
 
-const Licence: React.FunctionComponent = () => {
+const Licence = () => {
+  const licenceStrings = strings.licence;
 
-    const s = strings.licence
+  return (
+    <Layout title={title}>
+      <PageTitle title={title} />
+      <TextBlock question={licenceStrings[1].q} answer={licenceStrings[1].a} />
+      <TextBlock question={licenceStrings[2].q} answer={licenceStrings[2].a} />
+    </Layout>
+  );
+};
 
-    return (
-        <Layout title={title}>
-            <PageTitle title={title} />
-            <TextBlock
-                question={s[1].q}
-                answer={s[1].a}
-            />
-            <TextBlock
-                question={s[2].q}
-                answer={s[2].a}
-            />
-        </Layout>
-    )
-}
-
-export default Licence
+export default Licence;

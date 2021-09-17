@@ -26,7 +26,7 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const Header: React.FunctionComponent = () => (
+const Header = () => (
   <HeaderContainer>
     <h1>
       <Link href="/">

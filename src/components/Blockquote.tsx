@@ -1,5 +1,5 @@
 import React from "react";
-import FadeUI from "./UI/FadeUI";
+import FadeUI from "./ui/FadeUI";
 
 interface BlockQuoteProps {
   title: string;
