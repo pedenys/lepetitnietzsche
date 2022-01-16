@@ -2,7 +2,7 @@ import { RichText, RichTextBlock } from "prismic-reactjs";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Blockquote from "./Blockquote";
-import FadeUI from "./ui/FadeUI";
+import FadeUI from "components/UI/FadeUI";
 
 const QuoteContainer = styled.div`
   margin-bottom: 6rem;
