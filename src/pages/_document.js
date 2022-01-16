@@ -8,8 +8,8 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet();
 
     // Step 2: Retrieve styles from components in the page
-    const page = renderPage((App) => (props) =>
-      sheet.collectStyles(<App {...props} />)
+    const page = renderPage(
+      (App) => (props) => sheet.collectStyles(<App {...props} />)
     );
 
     // Step 3: Extract the styles as <style> tags
@@ -25,8 +25,13 @@ export default class MyDocument extends Document {
         <Head>
           <meta
             name="Description"
-            content="Ce site combat certaines idées reçues sur le philosophe Friedrich Nietzsche."
+            content="Ce site présente certaines idées reçues sur le philosophe Friedrich Nietzsche."
           ></meta>
+          <script
+            data-respect-dnt
+            async
+            src="https://cdn.splitbee.io/sb.js"
+          ></script>
           {this.props.styleTags}
           <link rel="shortcut icon" href="/static/favicon.png" />
         </Head>
