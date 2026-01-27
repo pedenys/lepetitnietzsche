@@ -1,0 +1,58 @@
+---
+import "@styles/theme.css";
+import "@styles/global.css";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Le petit Nietzsche" } = Astro.props;
+const year = new Date().getFullYear().toString();
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta
+      name="Description"
+      content="Ce site présente certaines idées reçues sur le philosophe Friedrich Nietzsche."
+    />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <title>{title}</title>
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="ba3f3ba8-44e3-42ff-bcdc-17a4ea24b0a1"></script>
+  </head>
+  <body>
+    <div class="layout-container">
+      <Header />
+      <main class="layout-inner">
+        <slot />
+      </main>
+      <Footer year={year} />
+    </div>
+  </body>
+</html>
+
+<style>
+  .layout-container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .layout-inner {
+    margin: 0 4rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .layout-inner {
+      margin: 0 1.6rem;
+    }
+  }
+</style>

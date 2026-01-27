@@ -1,0 +1,18 @@
+---
+import Layout from '@layouts/Layout.astro';
+import PageTitle from '@components/PageTitle.astro';
+import TextBlock from '@components/TextBlock.astro';
+import strings from '@resources/strings';
+
+const title = 'À propos';
+const aboutStrings = strings.about;
+---
+
+<Layout title={title}>
+  <PageTitle title={title} />
+  <TextBlock question={aboutStrings[1].q} answer={aboutStrings[1].a} />
+  <TextBlock question={aboutStrings[2].q} answer={aboutStrings[2].a} />
+  <TextBlock question={aboutStrings[3].q} answer={aboutStrings[3].a} />
+  <TextBlock question={aboutStrings[4].q} answer={aboutStrings[4].a} />
+  <TextBlock question={aboutStrings[5].q} answer={aboutStrings[5].a} />
+</Layout>

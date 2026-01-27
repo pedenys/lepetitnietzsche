@@ -1,0 +1,35 @@
+---
+import strings from '@resources/strings';
+---
+
+<div class="header-container">
+  <h1>
+    <a href="/">{strings.siteTitle}</a>
+  </h1>
+</div>
+
+<style>
+  .header-container h1 {
+    letter-spacing: -0.1rem;
+    font-size: 7rem;
+    font-weight: 400;
+    color: var(--color-blue);
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .header-container h1 a:hover {
+    color: var(--color-blue) !important;
+  }
+
+  .header-container h1 a:visited {
+    color: var(--color-blue);
+  }
+
+  @media screen and (max-width: 600px) {
+    .header-container h1 {
+      font-size: 4rem;
+    }
+  }
+</style>
