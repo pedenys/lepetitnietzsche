@@ -9,7 +9,7 @@ const { title, subTitle } = Astro.props;
 // Helper function to render content - can be string or array
 const renderContent = (arg: string | string[] | undefined) => {
   if (!arg) return null;
-  if (typeof arg === 'string') {
+  if (typeof arg === "string") {
     return [arg];
   }
   return Array.isArray(arg) ? arg : Object.values(arg);
@@ -21,7 +21,12 @@ const hasSubTitle = !!subTitle;
 ---
 
 <div class="page-title-container">
-  <div class:list={['page-title-inner', { 'has-subtitle': hasSubTitle, 'has-title': hasTitle }]}>
+  <div
+    class:list={[
+      "page-title-inner",
+      { "has-subtitle": hasSubTitle, "has-title": hasTitle },
+    ]}
+  >
     {content && content.map((text) => <p>{text}</p>)}
   </div>
 </div>
@@ -32,7 +37,7 @@ const hasSubTitle = !!subTitle;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
   }
 
   .page-title-inner {
@@ -55,7 +60,7 @@ const hasSubTitle = !!subTitle;
   }
 
   .page-title-inner p {
-    font-family: 'Eczar', serif;
+    font-family: "Eczar", serif;
     text-align: center;
     font-size: 1.6rem;
     margin: 0.3rem;

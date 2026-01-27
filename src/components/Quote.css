@@ -1,68 +1,60 @@
-.quote-container {
-  margin-bottom: 6rem;
-}
-
 .quote-container blockquote {
-  border-radius: 5px;
-  background-color: var(--color-gray);
-  border-left: 5px solid var(--color-blue);
-  font-family: "Space Mono", monospace;
-  margin: 3rem 0;
-  padding-left: 2rem;
+	border-radius: 5px;
+	background-color: var(--color-gray);
+	border-left: 5px solid var(--color-blue);
+	font-family: "Space Mono", monospace;
+	margin: 3rem 0;
+	padding-left: 2rem;
 }
 
 .quote-container blockquote h2 {
-  font-size: 2rem;
-  color: var(--color-blue);
-  margin: 1rem 0 0 0;
-  padding: 1rem 0;
+	font-size: 2rem;
+	color: var(--color-blue);
+	margin: 1rem 0 0 0;
+	padding: 1rem 0;
 }
 
 .quote-container blockquote p {
-  margin: 0 0 2rem 0;
-  padding: 0 0 2rem 0;
-  line-height: 1.3;
-  font-size: 1.8rem;
-  text-align: justify;
+	margin: 0 0 2rem 0;
+	padding: 0 0 2rem 0;
+	line-height: 1.3;
+	font-size: 1.8rem;
+	text-align: justify;
 }
 
 .paragraph-container p {
-  margin-top: 0;
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-left: 2rem;
-  text-align: justify;
+	margin-top: 0;
+	font-size: 2rem;
+	line-height: 1.6;
+	margin-left: 2rem;
+	text-align: justify;
 }
 
 @media screen and (max-width: 600px) {
-  .quote-container {
-    margin-bottom: 3.5rem;
-  }
+	.quote-container > * {
+		cursor: wait !important;
+	}
 
-  .quote-container > * {
-    cursor: wait !important;
-  }
+	.quote-container blockquote {
+		border-left: 0;
+	}
 
-  .quote-container blockquote {
-    border-left: 0;
-  }
+	.quote-container blockquote h2 {
+		font-size: 1.8rem;
+		line-height: 2rem;
+		margin-bottom: 0;
+	}
 
-  .quote-container blockquote h2 {
-    font-size: 1.8rem;
-    line-height: 2rem;
-    margin-bottom: 0;
-  }
+	.quote-container blockquote p {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		padding: 1rem 0;
+		color: black;
+		text-align: left;
+	}
 
-  .quote-container blockquote p {
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    padding: 1rem 0;
-    color: black;
-    text-align: left;
-  }
-
-  .paragraph-container p {
-    margin-left: 0;
-    font-size: 1.6rem;
-  }
+	.paragraph-container p {
+		margin-left: 0;
+		font-size: 1.6rem;
+	}
 }
