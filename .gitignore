@@ -1,5 +1,5 @@
 # env
-.env.*
+.env
 
 # NextJS
 .next
@@ -51,3 +51,6 @@ jspm_packages
 .next
 build
 out
+# Astro
+dist/
+.astro/

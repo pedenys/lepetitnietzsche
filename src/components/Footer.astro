@@ -1,0 +1,32 @@
+---
+interface Props {
+  year: string;
+}
+
+const { year } = Astro.props;
+---
+
+<div class="footer-container">
+  <footer>
+    <a href="/licence">© {year} CC-BY-SA 4.0</a>
+    <a href="/about">À propos</a>
+    <a href="https://twitter.com/_pedenys_">🐦</a>
+  </footer>
+</div>
+
+<style>
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-container a {
+    margin-right: 2rem;
+  }
+
+  .footer-container a:last-of-type {
+    margin-right: 0;
+  }
+</style>

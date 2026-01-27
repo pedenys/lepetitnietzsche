@@ -1,0 +1,25 @@
+/* Theme CSS Variables - converted from myTheme.ts */
+
+:root {
+  /* Colors */
+  --color-black: #444;
+  --color-blue: #00007F;
+  --color-darkgray: #AAA;
+  --color-gray: #EFEFEF;
+  --color-lightblue: #0000EE;
+  --color-white: #FFF;
+
+  /* Layout */
+  --max-width: 1000px;
+  --mobile-breakpoint: 600px;
+
+  /* Spacing */
+  --mb: 2rem;
+  --mb-between-paragraphs: 1.6rem;
+
+  /* Borders */
+  --border-wide: 3px solid #00007F;
+
+  /* Base font size for rem calculations */
+  font-size: 10px;
+}

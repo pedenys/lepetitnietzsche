@@ -1,36 +1,39 @@
-import React from "react";
-import FadeUI from "components/UI/FadeUI";
+import FadeUI from '@ui/FadeUI';
 
-interface BlockQuoteProps {
+interface BlockquoteProps {
   title: string;
   quote: string;
   showParagraph: boolean;
   toggleParagraph: () => void;
 }
 
-export class Blockquote extends React.Component<BlockQuoteProps> {
-  constructor(props: BlockQuoteProps) {
-    super(props);
-  }
-
-  blockquoteRef: any;
-
-  toggleParagraph = (): void => {
-    this.props.toggleParagraph();
-  };
-
-  render() {
-    return (
-      <div onClick={() => this.toggleParagraph()} style={{ cursor: "pointer" }}>
-        <blockquote>
-          <h2>{this.props.title}</h2>
-          <FadeUI show={!this.props.showParagraph}>
-            {!this.props.showParagraph ? <p> &gt; {this.props.quote}</p> : null}
-          </FadeUI>
-        </blockquote>
-      </div>
-    );
-  }
-}
+const Blockquote = ({
+  title,
+  quote,
+  showParagraph,
+  toggleParagraph,
+}: BlockquoteProps) => {
+  return (
+    <button
+      type="button"
+      onClick={toggleParagraph}
+      style={{
+        cursor: 'pointer',
+        background: 'none',
+        border: 'none',
+        padding: 0,
+        width: '100%',
+        textAlign: 'left',
+      }}
+    >
+      <blockquote>
+        <h2>{title}</h2>
+        <FadeUI show={!showParagraph}>
+          {!showParagraph ? <p> &gt; {quote}</p> : null}
+        </FadeUI>
+      </blockquote>
+    </button>
+  );
+};
 
 export default Blockquote;

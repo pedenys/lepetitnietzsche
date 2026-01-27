@@ -1,0 +1,45 @@
+---
+interface Props {
+  question: string;
+  answer: string;
+}
+
+const { question, answer } = Astro.props;
+---
+
+<div class="text-block-container">
+  <h2 set:html={question} />
+  <p set:html={answer} />
+</div>
+
+<style>
+  .text-block-container h2 {
+    font-size: 2.4rem;
+    color: var(--color-blue);
+    line-height: 1.3em;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .text-block-container p {
+    font-size: inherit;
+    margin-top: 0;
+    line-height: 1.7;
+    margin-bottom: var(--mb-between-paragraphs);
+  }
+
+  .text-block-container p a {
+    font-weight: 400;
+    color: royalblue;
+  }
+
+  .text-block-container p:last-of-type {
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .text-block-container h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
