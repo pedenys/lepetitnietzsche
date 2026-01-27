@@ -2,3 +2,12 @@ onlyBuiltDependencies:
   - cypress
   - esbuild
   - sharp
+
+overrides:
+  '@cypress/request@<=2.88.12': '>=3.0.0'
+  axios@<0.30.0: '>=0.30.0'
+  axios@>=0.8.1 <0.28.0: '>=0.28.0'
+  form-data@<2.5.4: '>=2.5.4'
+  lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
+  qs@<6.14.1: '>=6.14.1'
+  tmp@<=0.2.3: '>=0.2.4'
