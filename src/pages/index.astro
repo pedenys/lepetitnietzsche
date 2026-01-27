@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import PageTitle from '@components/PageTitle.astro';
-import Quote from '@components/Quote';
+import Quote from '@components/Quote.astro';
 import strings from '@resources/strings';
 import { fetchAllPrejudices } from '@services/prismic';
 import { asText } from '@prismicio/client';
@@ -14,7 +14,6 @@ const prejudices = await fetchAllPrejudices();
   {
     prejudices.map((prejudice) => (
       <Quote
-        client:load
         title={asText(prejudice.data.title)}
         quote={asText(prejudice.data.prejudice)}
         explanations={prejudice.data.explanation}

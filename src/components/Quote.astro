@@ -1,0 +1,172 @@
+---
+import type { RichTextField } from '@prismicio/client';
+import { asText } from '@prismicio/client';
+
+interface Props {
+  quote: string;
+  title: string;
+  explanations: RichTextField;
+}
+
+const { explanations, quote, title } = Astro.props;
+
+// Convert RichTextField to array of text
+const explanationTexts = explanations
+  ? explanations.map((block) => asText([block]))
+  : [];
+---
+
+<div class="quote-container" data-quote-component>
+  <button
+    type="button"
+    class="quote-toggle"
+    data-toggle-button
+  >
+    <blockquote>
+      <h2>{title}</h2>
+      <div class="quote-text" data-quote-text>
+        <p>&gt; {quote}</p>
+      </div>
+    </blockquote>
+  </button>
+
+  <div class="explanation-container" data-explanation hidden>
+    {explanationTexts.length > 0 && (
+      <div class="paragraph-container">
+        {explanationTexts.map((text) => (
+          <p>{text}</p>
+        ))}
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  .quote-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .quote-container blockquote {
+    border-radius: 5px;
+    background-color: var(--color-gray);
+    border-left: 5px solid var(--color-blue);
+    font-family: "Space Mono", monospace;
+    margin: 2rem 0;
+    padding-left: 2rem;
+  }
+
+  .quote-container blockquote h2 {
+    font-size: 2rem;
+    color: var(--color-blue);
+    margin: 1rem 0 0 0;
+    padding: 1rem 0;
+  }
+
+  .quote-container blockquote p {
+    margin: 0 0 2rem 0;
+    padding: 0 0 2rem 0;
+    line-height: 1.3;
+    font-size: 1.8rem;
+    text-align: justify;
+  }
+
+  .quote-text {
+    animation: fadeIn 1s;
+  }
+
+  .quote-text.hidden {
+    display: none;
+  }
+
+  .explanation-container {
+    animation: fadeIn 1s;
+  }
+
+  .explanation-container[hidden] {
+    display: none;
+  }
+
+  .explanation-container.fade-out {
+    animation: fadeOut 1s;
+  }
+
+  .paragraph-container p {
+    margin-top: 0;
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-left: 2rem;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 600px) {
+    .quote-container > * {
+      cursor: wait !important;
+    }
+
+    .quote-container blockquote {
+      border-left: 0;
+    }
+
+    .quote-container blockquote h2 {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      margin-bottom: 0;
+    }
+
+    .quote-container blockquote p {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      padding: 1rem 0;
+      color: black;
+      text-align: left;
+    }
+
+    .paragraph-container p {
+      margin-left: 0;
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<script>
+  // Add click handlers to all quote components on the page
+  document.addEventListener('DOMContentLoaded', () => {
+    const quoteComponents = document.querySelectorAll('[data-quote-component]');
+
+    quoteComponents.forEach((component) => {
+      const toggleButton = component.querySelector('[data-toggle-button]');
+      const quoteText = component.querySelector('[data-quote-text]');
+      const explanation = component.querySelector('[data-explanation]') as HTMLElement;
+
+      if (!toggleButton || !quoteText || !explanation) return;
+
+      let isExpanded = false;
+
+      toggleButton.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+
+        if (isExpanded) {
+          // Hide quote text, show explanation
+          quoteText.classList.add('hidden');
+          explanation.hidden = false;
+          explanation.classList.remove('fade-out');
+        } else {
+          // Show quote text, hide explanation with fade
+          quoteText.classList.remove('hidden');
+          explanation.classList.add('fade-out');
+
+          // Wait for animation to complete before hiding
+          setTimeout(() => {
+            explanation.hidden = true;
+            explanation.classList.remove('fade-out');
+          }, 1000);
+        }
+      });
+    });
+  });
+</script>
