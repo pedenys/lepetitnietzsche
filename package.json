@@ -18,7 +18,7 @@
   "author": "pedenys",
   "license": "ISC",
   "dependencies": {
-    "astro": "^5.0.0",
+    "astro": "^5.18.1",
     "@prismicio/client": "^7.0.0"
   },
   "devDependencies": {
