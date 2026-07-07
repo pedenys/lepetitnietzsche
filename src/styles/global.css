@@ -62,15 +62,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-blue);
 }
 
 a:hover {
-  color: var(--color-black) !important;
-}
-
-a:visited {
-  color: var(--color-lightblue);
+  color: black !important;
 }
 
 /* Animations */
