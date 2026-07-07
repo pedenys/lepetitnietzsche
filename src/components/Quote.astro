@@ -1,6 +1,6 @@
 ---
-import type { RichTextField } from '@prismicio/client';
-import { asText } from '@prismicio/client';
+import type { RichTextField } from "@prismicio/client";
+import { asText } from "@prismicio/client";
 
 interface Props {
   quote: string;
@@ -17,11 +17,7 @@ const explanationTexts = explanations
 ---
 
 <div class="quote-container" data-quote-component>
-  <button
-    type="button"
-    class="quote-toggle"
-    data-toggle-button
-  >
+  <button type="button" class="quote-toggle" data-toggle-button>
     <blockquote>
       <h2>{title}</h2>
       <div class="quote-text" data-quote-text>
@@ -31,13 +27,15 @@ const explanationTexts = explanations
   </button>
 
   <div class="explanation-container" data-explanation hidden>
-    {explanationTexts.length > 0 && (
-      <div class="paragraph-container">
-        {explanationTexts.map((text) => (
-          <p>{text}</p>
-        ))}
-      </div>
-    )}
+    {
+      explanationTexts.length > 0 && (
+        <div class="paragraph-container">
+          {explanationTexts.map((text) => (
+            <p>{text}</p>
+          ))}
+        </div>
+      )
+    }
   </div>
 </div>
 
@@ -77,6 +75,7 @@ const explanationTexts = explanations
 
   .quote-text {
     animation: fadeIn 1s;
+    margin-right: 2rem;
   }
 
   .quote-text.hidden {
@@ -92,7 +91,7 @@ const explanationTexts = explanations
   }
 
   .explanation-container.fade-out {
-    animation: fadeOut 1s;
+    animation: fadeOut 0.3s;
   }
 
   .paragraph-container p {
@@ -123,7 +122,6 @@ const explanationTexts = explanations
       line-height: 1.6rem;
       padding: 1rem 0;
       color: black;
-      text-align: left;
     }
 
     .paragraph-container p {
@@ -135,36 +133,38 @@ const explanationTexts = explanations
 
 <script>
   // Add click handlers to all quote components on the page
-  document.addEventListener('DOMContentLoaded', () => {
-    const quoteComponents = document.querySelectorAll('[data-quote-component]');
+  document.addEventListener("DOMContentLoaded", () => {
+    const quoteComponents = document.querySelectorAll("[data-quote-component]");
 
     quoteComponents.forEach((component) => {
-      const toggleButton = component.querySelector('[data-toggle-button]');
-      const quoteText = component.querySelector('[data-quote-text]');
-      const explanation = component.querySelector('[data-explanation]') as HTMLElement;
+      const toggleButton = component.querySelector("[data-toggle-button]");
+      const quoteText = component.querySelector("[data-quote-text]");
+      const explanation = component.querySelector(
+        "[data-explanation]",
+      ) as HTMLElement;
 
       if (!toggleButton || !quoteText || !explanation) return;
 
       let isExpanded = false;
 
-      toggleButton.addEventListener('click', () => {
+      toggleButton.addEventListener("click", () => {
         isExpanded = !isExpanded;
 
         if (isExpanded) {
           // Hide quote text, show explanation
-          quoteText.classList.add('hidden');
+          quoteText.classList.add("hidden");
           explanation.hidden = false;
-          explanation.classList.remove('fade-out');
+          explanation.classList.remove("fade-out");
         } else {
           // Show quote text, hide explanation with fade
-          quoteText.classList.remove('hidden');
-          explanation.classList.add('fade-out');
+          quoteText.classList.remove("hidden");
+          explanation.classList.add("fade-out");
 
           // Wait for animation to complete before hiding
           setTimeout(() => {
             explanation.hidden = true;
-            explanation.classList.remove('fade-out');
-          }, 1000);
+            explanation.classList.remove("fade-out");
+          }, 200);
         }
       });
     });
