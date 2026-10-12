@@ -1,7 +1,7 @@
 const fr: any = {
   siteTitle: "Le petit Nietzsche",
   howto: {
-    1: "Ce site combat certaines idées reçues sur le philosophe Friedrich Nietzsche.",
+    1: "Ce site présente certaines idées reçues sur le philosophe Friedrich Nietzsche.",
     2: "Cliquer sur chaque bloc pour dérouler l'explication correspondante.",
   },
   about: {
